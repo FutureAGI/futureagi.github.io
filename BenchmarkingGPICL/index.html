@@ -192,6 +192,18 @@
 
 然而，当前的上下文学习还存在明显局限性：包括上下文学习的样本量通常不是很多（通常是少量示例）。而且上下文学习通常被限制在“指令跟随”级别，而无法在上下文内，做反复尝试和优化的复杂过程（如强化学习）。此外，尽管近期以来，大模型能够编码的上下文长度在不断增长，需要看到很多上下文编码不是真正的“学习”过程。大部分是偏简单的复制，召回特定内容等任务。<br><br>
 
+<center>
+    <table align=center width=850px>
+    <tr>
+    <td width=260px>
+    <center>
+    <img class="round" style="width:100%" src="./imgs/HTML_GPICL.png" alt="通用上下文学习定义及其和其他学习方法区别"/>
+    </center>
+    </td>
+    </tr>
+    </table>
+</center>
+
 我们认为，为了实现真正的通用人工智能，有必要将上下文学习扩展到通用上下文学习（General Purpose In-Context Learning， GPICL）。相对于其他方法，GPICL具有如下显著特征<br>
 
 <ul>  
@@ -199,11 +211,6 @@
   <li>长上下文学习周期（Long In-Context Learning Horizon）.</li>  
   <li>高上下文学习天花板（High In-Context Learning Potential）.</li>  
 </ul>
-
-<div class="image-container">
-	<center>
-    <img class="round" src="./imgs/HTML_GPICL.png" alt="通用上下文学习定义及其和其他学习方法区别">
-</div>
 
 尽管提升上下文学习的上限和长度已经是大家共识，但降低零样本能力作为目标较为反直觉，其中原因是什么？ 我们认为，零样本泛化能力和数据的多样性成反向关系：零样本泛化能力越强恰恰越证明训练模型所使用的训练样本和训练任务的多样性有限，而使得模型保留了过多任务或者任务范围相关的知识，但这进一步限制了模型的泛化到任务范围外的能力。为此，我们认为，合适的任务集合，是帮助AI学习到通用上下文学习能力的关键。所以，降低零样本泛化能力的目标不在于对于一个固定的训练集，我们需要让模型尽可能学不到样本中的知识；而在于我们需要采用尽可能多样的训练集，这种多样性足以使模型无法对任务学习到任何预先的假设。
 
@@ -252,12 +259,17 @@
 
 基于此，我们还提出不同于当前大语言模型的一种新的可能的训练方法：通过海量的合成数据，训练通用上下文学习的能力。再通过小规模的高质量数据，对齐模型和人类的偏好。这和自然智能的产生更为相似： 前者对应几十亿年生命进化，后者则对应人类个体的一生。
 
-<div class="image-container">
-	<center>
-    <img class="round" src="./imgs/GPICL_Pipeline.png" alt="通用上下文学习主导的大模型训练流程说明">
-</div>
-</td>
-</tr>
+<center>
+    <table align=center width=850px>
+    <tr>
+    <td width=260px>
+    <center>
+    <img class="round" style="width:100%" src="./imgs/GPICL_Pipeline.png" alt="通用上下文学习主导的大模型训练流程说明"/>
+    </center>
+    </td>
+    </tr>
+    </table>
+</center>
 
 </body>
 </html>
