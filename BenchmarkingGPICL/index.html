@@ -218,7 +218,7 @@
 </tr>
 
 <table align=center width=850px>
-<center><h1>评测通用上下文学习的标准</h1></center>
+<center><h1>通用上下文学习评测集的要求</h1></center>
 <tr>
 <td>
 基于上述原因，我们认为，建立适合于通用上下文学习（GPICL）的训练和评测任务集非常重要。通用上下文学习顾名思义，可以泛化更广的未见任务，甚至包括不同模态，而不要求这些任务或者模态在预训练（Pre-training, 或者元训练 Meta-training）时被见过。具体的，我们认为通用上下文学习需要满足几个标准：
@@ -239,6 +239,24 @@
 </td>
 </tr>
 
+<center>
+    <table align=center width=850px>
+    <tr>
+    <td width=260px>
+    <center>
+    <img class="round" style="width:100%" src="./imgs/MetaLM_Scaling_Law.png" alt="元语言模型在不同复杂度的元语言上的评测效果，最后PG-19是一个自然语言评测集。模型的表现随着上下文长度的增加而变好，即便是没有训练过的自然语言亦是如此，证明元语言训练具有很好的泛用性。此外，几千万参数的模型继续Scaling Up对效果并没有帮助。证明GPICL不是总需要巨大的参数量。"/>
+    <img class="round" style="width:60%" src="./imgs/Demo_Eng.pdf" alt="元语言模型具备利用上下文学习完全未知数据的能力。这里元语言模型学习英文单词。模型能够捕捉英文单词的规律。"/>
+    <img class="round" style="width:60%" src="./imgs/Demo_Math.pdf" alt="元语言模型具备利用上下文学习完全未知数据的能力。这里元语言模型学习数学等式。模型能够捕捉数学等式的规律。"/>
+    </center>
+    </td>
+    </tr>
+    </table>
+</center>
+
+</body>
+</html>
+
+
 <table align=center width=850px>
 <center><h1>迷宫世界 （Maze World）</h1></center>
 <tr>
@@ -248,6 +266,22 @@
 我们的实验结果证明，使用Transformer结构进行上下文学习，具备“世界模型”（World Model）和“策略模型”（Policy Model）进行同时上下文学习的能力（据我们了解，这是第一个观察到世界模型ICL的工作），但当前实验结果也表明，当前模型离理想状态（如较好的标杆智能体）还有比较大差距，因此也存在巨大的优化空间。
 </td>
 </tr>
+
+<center>
+    <table align=center width=850px>
+    <tr>
+    <td width=260px>
+    <center>
+    <img class="round" style="width:100%" src="./imgs/MazeWorld_Explanation.png" alt="迷宫世界环境和标杆智能体的地图记忆说明"/>
+    <img class="round" style="width:100%" src="./imgs/Fig_MazeWorldModel.pdf" alt="世界模型和策略模型一体的迷宫导航模型"/>
+    <img class="round" style="width:100%" src="./imgs/WM_PM_Decay.png" alt="评测中世界模型和策略模型显示出随着上下文变长的自适应能力"/>
+    <img class="round" style="width:100%" src="./imgs/World_Modeling.png" alt="利用上下文学习的世界模型在未来预测上变得越来越准确"/>
+    </center>
+    </td>
+    </tr>
+    </table>
+</center>
+
 
 <table align=center width=850px>
 <center><h1>Scaling Up Paramter vs. Scaling Up Memory & Contexts </h1></center>
