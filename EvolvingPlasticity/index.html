@@ -168,12 +168,8 @@
 	</center>
 
 <hr>
-<div style="text-align: center;">
-    <video width="100%" controls autoplay loop muted>
-        <source src="https://www.bilibili.com/video/BV1ce4y1k7DN/?spm_id_from=333.999.0.0" type="video/mp4">
-    </video>
-</div>
-<br>
+<iframe src="//player.bilibili.com/player.html?bvid=BV1ce4y1k7DN&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<hr>
 
 <table align=center width=850px>
 <center><h1>什么是基因瓶颈？什么又是神经网络的可塑性？</h1></center>
@@ -195,7 +191,8 @@
     <td width=260px>
     <center>
     <img class="round" style="width:100%" src="./imgs/GenomicsBottleneck.png" alt="Genomics Bottleneck"/>
-    <p class="caption">基因瓶颈主导的生物进化示意图。我们的基因遗传自上一辈，但其包含信息量相对较少。而我们大脑记忆全部来自于后天，其可记忆内容数量至少比基因高三个量级</p>
+    <p class="caption">基因瓶颈主导的生物进化示意图。我们的基因遗传自上一辈，但其包含信息量相对较少(这里的Genotype)。
+                        而我们大脑记忆全部来自于后天，其可记忆内容数量至少比基因高三个量级(这里的Phenotype)</p>
     </center>
     </td>
     </tr>
@@ -221,7 +218,7 @@
     <td width=260px>
     <center>
     <img class="round" style="width:100%" src="./imgs/MetaRL.png" alt="可塑循环神经网络用于上下文强化学习"/>
-    <p class="caption">一个循环且其参数权重可塑的神经网络，利用交互轨迹进行上下文强化学习</p>
+    <p class="caption">一个循环且其参数权重可塑的神经网络，利用交互轨迹进行上下文强化学习。模型每一步将状态、动作、奖励作为输入，预测下一时刻的动作。</p>
     </center>
     </td>
     </tr>
@@ -234,7 +231,7 @@
     <td width=260px>
     <center>
     <img class="round" style="width:100%" src="./imgs/InformationBottleneck.png" alt="不同神经网络的参数和记忆规模"/>
-    <p class="caption">不同神经网络的参数和记忆规模，我们发现，参数量较小，模型具有更好的泛化性。记忆空间越大，模型具有更好的学习能力</p>
+    <p class="caption">不同神经网络的参数(元参数，Meta-Parameter)和记忆规模(Adaptive-Components)，我们发现，参数量较小，模型具有更好的泛化性。记忆空间越大，模型具有更好的学习能力</p>
     </center>
     </td>
     </tr>
