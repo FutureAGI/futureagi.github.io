@@ -1,0 +1,268 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+
+	.disclaimerbox {
+		background-color: #eee;
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+<h1> 
+	<title>Evolving Plasticity with Genomics Bottleneck </title>
+	<meta property="og:image" content="https://github.com/FutureAGI/futureagi.github.io/blob/main/EvolvingPlasticity/imgs/GenomicsBottleneck.png"/> 
+	<meta property="og:title" content="基于基因瓶颈和神经网络可塑性的上下文学习" />
+	<meta property="og:description" content="生物服从的基因瓶颈，对AI来说是否也有意义？" />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">进化服从基因瓶颈的神经网络可塑性规则</span><br>
+		<span style="font-size:24px">Evolving Plasticity with Genomics Bottleneck</span>
+		<table align=center width=850px>
+			<tr>
+				<td>
+	            <center>
+				<strong style="color: red; font-weight: bold;">降低参数，增加记忆</strong>
+				</td>
+			</tr>
+		</table>
+		<table align=center width=600px>
+			<table align=center width=250px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://arxiv.org/abs/2109.03554'>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://github.com/WorldEditors/EvolvingPlasticANN'>[Code]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+
+<hr>
+<div style="text-align: center;">
+    <video width="100%" controls autoplay loop muted>
+        <source src="https://www.bilibili.com/video/BV1ce4y1k7DN/?spm_id_from=333.999.0.0" type="video/mp4">
+    </video>
+</div>
+<br>
+
+<table align=center width=850px>
+<center><h1>什么是基因瓶颈？什么又是神经网络的可塑性？</h1></center>
+<tr>
+<td>
+
+基因瓶颈是生物进化的一个重要特征。我们用来指代指在生物进化过程中，其可遗传的基因相比于像人类一样的高等动物大脑的复杂性简单得多的情况。
+基因瓶颈给人工智能带来了重要的启示：自然界并不直接赋予智能以技能和知识，而是通过基因赋予了学习知识和技能的能力，而决定这种能力的参数要远比知识和技能本身要少得多。
+<br><br>
+人类学习和记忆能力的一个重要来源就是<strong style="color: red; font-weight: bold;">神经网络可塑性</strong>。
+不同于当前人工神经网络，预训练后权重很难再调整，而且每次调整必须有目标函数和大量数据，使用梯度下降的方式，可塑性允许神经网络在推理的同时修正自身的权重，符合无梯度上下文学习和元学习的一些特征。
+然而，当前人工设计的可塑性规则恰好都不符合<strong style="color: red; font-weight: bold;">基因瓶颈</strong>的特征。往往需要比参数更多的学习规则。
+<br><br>
+我们尝试设计符合基因瓶颈的可塑性规则，这种模型不具备很强的初始能力，但随着上下文的增加，这种模型会变得越来越擅长。这类模型的典型特点是：参数量少，但是存储记忆能力较强。这种学习方式，更具有生物智能体的特点：婴儿阶段起点更低，但上下文学习的潜力更大。
+
+<center>
+    <table align=center width=850px>
+    <tr>
+    <td width=260px>
+    <center>
+    <img class="round" style="width:100%" src="./imgs/GenomicsBottleneck.png" alt="Genomics Bottleneck"/>
+    <p class="caption">基因瓶颈主导的生物进化示意图。我们的基因遗传自上一辈，但其包含信息量相对较少。而我们大脑记忆全部来自于后天，其可记忆内容数量至少比基因高三个量级</p>
+    </center>
+    </td>
+    </tr>
+    </table>
+</center>
+
+
+<table align=center width=850px>
+<center><h1>进化一个较少规则驱动的可塑的循环神经网络</h1></center>
+<tr>
+<td>
+
+我们用一个参数量很少（学习规则很少，只有几百）但记忆空间很大（记忆状态几千）的可塑的循环神经网络（Decomposed Plasitic RNN, DecPRNN）来进行上下文强化学习，针对迷宫环境进行训练和评测。我们发现一些重要结论
+<ul>  
+    <li><strong style="color: red; font-weight: bold;">更少的参数意味着更低的起点</strong></li>  
+  <li><strong style="color: red; font-weight: bold;">更大的记忆空间意味着更高的终点</strong></li>  
+  <li><strong style="color: red; font-weight: bold;">参数量和最终的能力无直接关联，甚至更少的参数量会有更好的泛化性</strong></li>  
+</ul>
+
+<center>
+    <table align=center width=850px>
+    <tr>
+    <td width=260px>
+    <center>
+    <img class="round" style="width:100%" src="./imgs/MetaRL.png" alt="可塑循环神经网络用于上下文强化学习"/>
+    <p class="caption">一个循环且其参数权重可塑的神经网络，利用交互轨迹进行上下文强化学习</p>
+    </center>
+    </td>
+    </tr>
+    </table>
+</center>
+
+<center>
+    <table align=center width=850px>
+    <tr>
+    <td width=260px>
+    <center>
+    <img class="round" style="width:100%" src="./imgs/InformationBottleneck.png" alt="不同神经网络的参数和记忆规模"/>
+    <p class="caption">不同神经网络的参数和记忆规模，我们发现，参数量较小，模型具有更好的泛化性。记忆空间越大，模型具有更好的学习能力</p>
+    </center>
+    </td>
+    </tr>
+    </table>
+</center>
+
+<center>
+    <table align=center width=850px>
+    <tr>
+    <td width=260px>
+    <center>
+    <img class="round" style="width:100%" src="./imgs/Rewards.png" alt="不同神经网络的最终表现"/>
+    <p class="caption">不同神经网络的最终表现。符合基因瓶颈的结构和算法，起点低，但最终效果更好。</p>
+    </center>
+    </td>
+    </tr>
+    </table>
+</center>
+
+<table align=center width=850px>
+<center><h1>对于通用智能的启示</h1></center>
+<tr>
+<td>
+我们呼吁，不应过分强调海量参数。适中的参数量 + 海量的可读写记忆单元，对于建立通用人工智能具有更好的前景。
+这里的记忆单元，是模型通过上下文学习到的显式（如记忆状态）或者隐式的记忆单元（如可塑的连接权重）。
+我们也认为，通过多个重复的单元，能降低参数量并且进一步增加记忆空间，因此，群聚智能也将是非常具有潜力的方向。
+</td>
+</tr>
+
+</body>
+</html>
