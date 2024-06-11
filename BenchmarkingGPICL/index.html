@@ -1,4 +1,3 @@
-
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
@@ -122,7 +121,7 @@
 <h1> 
 	<title>Benchmarking General Purpose In-Context Learning </title>
 	<meta property="og:image" content="https://github.com/FutureAGI/futureagi.github.io/blob/main/BenchmarkingGPICL/imgs/HTML_ICL.png"/> 
-	<meta property="og:title" content="通用上下文学习训练和评测." />
+	<meta property="og:title" content="通用上下文学习及其训练和评测." />
 	<meta property="og:description" content="低的零样本泛化能力，长上下文学习周期，高上下文学习天花板 - 通向通用上下文学习和通用人工智能" />
 
 	<!-- Get from Google Analytics -->
@@ -140,7 +139,7 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">通用上下文学习训练和评测</span><br>
+		<span style="font-size:36px">通用上下文学习及其训练和评测</span><br>
 		<span style="font-size:24px">Benchmarking General Purpose In-Context Learning</span>
 		<table align=center width=850px>
 			<tr>
@@ -178,7 +177,7 @@
 <br>
 
 <table align=center width=850px>
-<center><h1>上下文学习、通用上下文学习和元学习</h1></center>
+<center><h1>什么是通用上下文学习？为什么要强调它？</h1></center>
 <tr>
 <td>
 我们认为， 大模型智能涌现的核心能力包括两方面<br>
@@ -237,7 +236,7 @@
 </tr>
 
 <table align=center width=850px>
-<center><h1>元语言（Meta-Language）生成器</h1></center>
+<center><h1>元语言(Meta-Language)生成器</h1></center>
 <tr>
 <td>
 我们认为，相比于学习具体的，自然的语言，学习一种新的语言的过程符合GPICL的需求。然而，世界上常用的语言不过数百种，如果将自然语言的学习本身作为样本，其数量过于稀少。因此，一种理想的方式是创造近乎无数种类的“语言”。每个“语言”是一个超长序列的样本。模型通过上下文可以学会一种新的语言。我们提出一种“创造”这种新“语言”的方式，是用随机参数的网络，来生成随机的序列。这种随机的序列在相对较短的时候没有任何意义。但随着这个序列不断延长，生成该序列的内在规律可以被外部捕捉到。这种无限的“新语言”的序列，是GPICL理想的试验场。<br><br>
@@ -269,7 +268,7 @@
 
 
 <table align=center width=850px>
-<center><h1>迷宫世界 （Maze World）</h1></center>
+<center><h1>迷宫世界(Maze World)生成和模拟</h1></center>
 <tr>
 <td>
 迷宫世界是一个规则明确，但多样性又足够显著的轻量级仿真环境。在迷宫世界中，可以轻易定制大小，结构，墙面完全不同的迷宫。在这个仿真环境中，我们设置了导航（NAVIGATION）和生存（SURVIVAL）两类任务。以导航任务为例，我们在迷宫中会随机加入多样的，一定数量的“地标”。这些标志随机产生在一个随机迷宫的不同位置。对于一个智能体，我们的环境会产生随机的指令，要求智能体尽快抵达特定颜色的地标。这要求智能体能够探索、记忆、定位、寻径，高效达成任务。且对于任何一个任务，因为迷宫和地标都是完全随机的，智能体除了依赖于自己探索，没有任何方式知道有关迷宫的任何先验信息。<br><br>
@@ -299,7 +298,7 @@
 
 
 <table align=center width=850px>
-<center><h1>Scaling Up Paramter vs. Scaling Up Memory & Contexts </h1></center>
+<center><h1>增加参数量还是增加记忆和上下文？</h1></center>
 <tr>
 <td>
 上述两个环境，尽管我们上下文学习长度都只做到2K到4K, 我们可以通过修改配置，将上下文学习的最短长度扩展到百万甚至数十亿以上。我们相信，这类评测训练集对于长上下文学习，以及通用上下文学习具有重要意义。此外，尽管两个环境相对较简单也较轻量，但具有较大的研究意义。元语言目标是训练具有语言学习和适应能力的通用智能体，而迷宫的目标是具有未知环境的探索、定位、导航能力一体的通用具身智能体。
