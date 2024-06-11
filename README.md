@@ -1,1 +1,1 @@
-# Benchmarking General Purpose In-Context Learning (GPICL)
+# Laboratory Towards General Intelligence
