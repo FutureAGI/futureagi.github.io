@@ -119,10 +119,10 @@
 <html>
 <head>
 <h1> 
-	<title>Evolving Plasticity with Genomics Bottleneck </title>
+	<title>Evolving Plasticity with Information Bottleneck </title>
 	<meta property="og:image" content="https://github.com/FutureAGI/futureagi.github.io/blob/main/EvolvingPlasticity/imgs/GenomicsBottleneck.png"/> 
-	<meta property="og:title" content="基于基因瓶颈和神经网络可塑性的上下文学习" />
-	<meta property="og:description" content="生物服从的基因瓶颈，对AI来说是否也有意义？" />
+	<meta property="og:title" content="基于信息瓶颈和神经网络可塑性的上下文学习" />
+	<meta property="og:description" content="生物神经网络和基因存在的信息瓶颈，对AI来说是否也有意义？" />
 
 	<!-- Get from Google Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -137,10 +137,11 @@
 </head>
 
 <body>
+	<span style="font-size:24px"><a href='https://futureagi.github.io/'>[回到主目录]</a></span>
 	<br>
 	<center>
-		<span style="font-size:36px">进化服从基因瓶颈的神经网络可塑性规则</span><br>
-		<span style="font-size:24px">Evolving Plasticity with Genomics Bottleneck</span>
+		<span style="font-size:36px">进化服从信息瓶颈的神经网络可塑性规则</span><br>
+		<span style="font-size:24px">Evolving Plasticity with Information Bottleneck</span>
 		<table align=center width=850px>
 			<tr>
 				<td>
@@ -172,18 +173,17 @@
 <hr>
 
 <table align=center width=850px>
-<center><h1>什么是基因瓶颈？什么又是神经网络的可塑性？</h1></center>
+<center><h1>什么是生物神经网络的信息瓶颈？和神经网络的可塑性是什么关系？</h1></center>
 <tr>
 <td>
-
-基因瓶颈是生物进化的一个重要特征。我们用来指代指在生物进化过程中，其可遗传的基因相比于像人类一样的高等动物大脑的复杂性简单得多的情况。
-基因瓶颈给人工智能带来了重要的启示：自然界并不直接赋予智能以技能和知识，而是通过基因赋予了学习知识和技能的能力，而决定这种能力的参数要远比知识和技能本身要少得多。
+信息瓶颈是生物神经网络的一个重要特征。在生物进化过程中，基因遗传的信息相比于像人类一样的高等动物大脑的复杂性简单得多的情况。
+这种现象给人工智能带来了重要的启示：因为信息瓶颈的存在，生物神经网络无法直接从上一代遗传大量的技能和知识，而是通过后天重新学习知识和技能。而基因被认为主要编码了记忆和学习的能力而不是记忆和技能本身。
 <br><br>
-人类学习和记忆能力的一个重要来源就是<strong style="color: red; font-weight: bold;">神经网络可塑性</strong>。
+人类学习和记忆能力的一个重要方式就是<strong style="color: red; font-weight: bold;">神经网络可塑性</strong>。
 不同于当前人工神经网络，预训练后权重很难再调整，而且每次调整必须有目标函数和大量数据，使用梯度下降的方式，可塑性允许神经网络在推理的同时修正自身的权重，符合无梯度上下文学习和元学习的一些特征。
-然而，当前人工设计的可塑性规则恰好都不符合<strong style="color: red; font-weight: bold;">基因瓶颈</strong>的特征。往往需要比参数更多的学习规则。
+然而，当前人工设计的可塑性规则恰好都不符合<strong style="color: red; font-weight: bold;">信息瓶颈</strong>的特征。往往需要比参数更多的学习规则。
 <br><br>
-我们尝试设计符合基因瓶颈的可塑性规则，这种模型不具备很强的初始能力，但随着上下文的增加，这种模型会变得越来越擅长。这类模型的典型特点是：参数量少，但是存储记忆能力较强。这种学习方式，更具有生物智能体的特点：婴儿阶段起点更低，但上下文学习的潜力更大。
+我们尝试设计符合信息瓶颈的可塑性规则，这种模型不具备很强的初始能力，但随着上下文的增加，这种模型会变得越来越擅长。这类模型的典型特点是：参数量少，但是存储记忆能力较强。这种学习方式，更符合生物智能体的特点：婴儿阶段起点更低，但上下文学习的潜力更大。
 
 <center>
     <table align=center width=850px>
@@ -191,7 +191,7 @@
     <td width=260px>
     <center>
     <img class="round" style="width:100%" src="./imgs/GenomicsBottleneck.png" alt="Genomics Bottleneck"/>
-    <p class="caption">基因瓶颈主导的生物进化示意图。我们的基因遗传自上一辈，但其包含信息量相对较少(这里的Genotype)。
+    <p class="caption">信息瓶颈限制下的生物进化示意图。我们的基因遗传自上一辈，但其包含信息量相对较少(这里的Genotype)。
                         而我们大脑记忆全部来自于后天，其可记忆内容数量至少比基因高三个量级(这里的Phenotype)</p>
     </center>
     </td>
