@@ -137,6 +137,7 @@
 </head>
 
 <body>
+	<span style="font-size:24px"><a href='https://futureagi.github.io/'>[Back To FutureAGI]</a></span>
 	<br>
 	<center>
 		<span style="font-size:36px">通用上下文学习及其训练和评测</span><br>
@@ -207,7 +208,7 @@
 我们认为，为了实现真正的通用人工智能，有必要将上下文学习扩展到通用上下文学习（General Purpose In-Context Learning， GPICL）。相对于其他方法，GPICL具有如下显著特征<br>
 
 <ul>  
-  <li><strong style="color: red; font-weight: bold;">低的零样本泛化能力</strong>（Low Zero-shot Generalization）.</li>  
+  <li><strong style="color: red; font-weight: bold;">低归纳偏倚导致的低零样本泛化能力</strong>（Minimal Inductive Bias and Low Zero-shot Generalization）.</li>  
   <li><strong style="color: red; font-weight: bold;">长上下文学习周期</strong>（Long In-Context Learning Horizon）.</li>  
   <li><strong style="color: red; font-weight: bold;">高上下文学习天花板</strong>（High In-Context Learning Potential）.</li>  
 </ul>
@@ -228,7 +229,7 @@
 基于上述原因，我们认为，建立适合于通用上下文学习（GPICL）的训练和评测任务集非常重要。通用上下文学习顾名思义，可以泛化更广的未见任务，甚至包括不同模态，而不要求这些任务或者模态在预训练（Pre-training, 或者元训练 Meta-training）时被见过。具体的，我们认为通用上下文学习需要满足几个标准：
 <ul>  
   <li><strong style="color: red; font-weight: bold;">任务数量和任务多样性足够大</strong>，
-          以至于任何模型不能从任务集中学习到任何可用的零样本泛化知识。如果任务数量多但多样性不够大，模型很容易学到高的零样本泛化能力，但上下文学习的潜力和必要性不强，但对于任务集外的任务可能泛化行就欠缺。如果任务多样性足够大，但数量不够多，则模型容易陷入“多任务学习”+ “任务辨识”的陷阱。即：模型尝试在预训练时，把所有任务完成方式和特点“记忆”下来，推理时，仅仅需要很少上下文去做“任务辨识”，就足以很好完成任务。这两种都不会引导模型学习真正的GPICL能力。</li>  
+  以至于任何模型不能从任务集中学习到任何可用的零样本泛化知识,从而引导模型学习到最低的归纳偏倚（inductive bias）。如果任务数量多但多样性不够大，模型很容易学到高的零样本泛化能力，但上下文学习的潜力和必要性不强，但对于任务集外的任务可能泛化行就欠缺。如果任务多样性足够大，但数量不够多，则模型容易陷入“多任务学习”+ “任务辨识”的陷阱。即：模型尝试在预训练时，把所有任务完成方式和特点“记忆”下来，推理时，仅仅需要很少上下文去做“任务辨识”，就足以很好完成任务。这两种都不会引导模型学习真正的GPICL能力。</li>  
   <li><strong style="color: red; font-weight: bold;">终生上下文学习</strong>（Lifelong In-Context Learning），模型需要依赖足够长的上下文，不是两三个，也不是二三十个样本，而是数百万计，甚至数十亿计的上下文，才能完全掌握任务。这里的上下文长度，是在“理想的学习方法”下，最小的上下文长度。</li>  
   <li><strong style="color: red; font-weight: bold;">持续的生成和交互</strong>。上下文是通过实时不断生成和交互产生的持续性的样本。</li>  
 </ul>
@@ -288,8 +289,12 @@
     <p class="caption">世界模型和策略模型一体的迷宫导航模型</p>
     <img class="round" style="width:100%" src="./imgs/WM_PM_Decay.png" alt="评测中世界模型和策略模型显示出随着上下文变长的自适应能力"/>
     <p class="caption">评测中世界模型和策略模型显示出随着上下文变长的自适应能力</p>
-    <img class="round" style="width:100%" src="./imgs/World_Modeling.png" alt="利用上下文学习的世界模型在未来预测上变得越来越准确"/>
-    <p class="caption">利用上下文学习的世界模型在未来预测上变得越来越准确</p>
+    <img class="round" style="width:100%" src="./imgs/WMICL_Case1.png" alt="利用上下文学习的世界模型在未来预测上变得越来越准确1"/>
+    <p class="caption">利用上下文学习的世界模型在未来预测上变得越来越准确 (1)</p>
+    <img class="round" style="width:100%" src="./imgs/WMICL_Case2.png" alt="利用上下文学习的世界模型在未来预测上变得越来越准确2"/>
+    <p class="caption">利用上下文学习的世界模型在未来预测上变得越来越准确 (2)</p>
+    <img class="round" style="width:100%" src="./imgs/WMICL_Case3.png" alt="利用上下文学习的世界模型在未来预测上变得越来越准确3"/>
+    <p class="caption">利用上下文学习的世界模型在未来预测上变得越来越准确 (3)</p>
     </center>
     </td>
     </tr>
