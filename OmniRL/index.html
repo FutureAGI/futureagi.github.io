@@ -118,9 +118,8 @@
 
 <html>
 <head>
-<h1> 
-	<title>Benchmarking General Purpose In-Context Learning </title>
-	<meta property="og:image" content="https://github.com/FutureAGI/futureagi.github.io/blob/main/OmniRL/imgs/head.png" />
+<h2> 
+	<title>OmniRL: In-Context Reinforcement Learning By Large-Scale Meta-Training in Randomized World </title>
 	<meta property="og:title" content="OmniRL:基于随机世界中大规模元训练的上下文强化学习" />
 
 	<!-- Get from Google Analytics -->
@@ -181,15 +180,15 @@
 </center>
 
 <table align=center width=850px>
-<center><h1>预训练和元训练：授模型以鱼和授模型以渔</h1></center>
+<center><h2>预训练和元训练：授模型以鱼和授模型以渔</h2></center>
 <tr>
 <td>
 训练最早以教会模型完成多种多样的任务为出发点，在大规模预训练中，模型除了记住这些训练任务本身，涌现出的最重要的能力就是上下文学习（In-Context Learning），这种能力能够帮助大模型通过提示信息来构建完成新任务的能力。
 <br>
 OmniRL提出大规模元训练，和预训练不同之处在于，OmniRL目标不是记忆训练任务的技能本身，而是学习如何进行强化学习的过程。元学习，又叫学习学习的方法(Learning To Learn)，早在80年代被提出。但OmniRL论文认为，缺乏大规模任务和长序列支撑的元学习，容易实际陷入“任务识别”的模式：模型只是记住了训练的环境，在推理时通过识别处于哪一个环境“激活”对应的技能。这种模式不具备对未见任务和分布外任务的泛化性。
 
-<table align=center width=850px>
-<center><h1>随机世界：AnyMDP</h1></center>
+<h2>随机世界：AnyMDP</h2>
+AnyMDP基于马尔科夫决策过程（Markov Decision Process, MDP）构建随机迁移概率和奖励函数，能够迅速低成本生成海量的，可规模化的环境用于元强化学习。我们生成了共计超过50万个不同任务，并基于这些任务合成了超过100亿时间步的数据用于元训练。单个序列的时间步长最长超过100万。
 <tr>
 <td>
 <center>
@@ -197,23 +196,22 @@ OmniRL提出大规模元训练，和预训练不同之处在于，OmniRL目标�
 	<tr>
 	<td width=260px>
 	<center>
-	<img class="round" style="width:100%" src="./imgs/AnyMDP_Visualization.png" alt="AnyMDP生成的随机世界示例"/>
+	<img class="round" style="height:100px" src="./imgs/AnyMDP_Visualization.png" alt="AnyMDP生成的随机世界示例"/>
 	<p class="caption"> AnyMDP生成的随机世界示例。点的颜色标识状态的平均奖励，线的深度标识状态之间的平均转移概率</p>
 	</center>
 	</td>
 	</tr>
 	</table>
 </center>
-AnyMDP基于马尔科夫决策过程（Markov Decision Process, MDP）构建随机迁移概率和奖励函数，能够迅速低成本生成海量的，可规模化的环境用于元强化学习。我们生成了共计超过50万个不同任务，并基于这些任务合成了超过100亿时间步的数据用于元训练。单个序列的时间步长最长超过100万。
 
 
-<table align=center width=850px>
-<center><h1>首次利用上下文学习统一多强化学习和模仿学习</h1></center>
+<h2>首次利用上下文学习统一多强化学习和模仿学习</h2>
 OmniRL提出同时利用先验信息和后验奖励（Feedback）进行上下文学习，使得该模型可以自己在不同学习模式间根据需求切换。图2展示了在随机世界中训练的OmniRL模型，仅通过上下文学习，不依赖于任何梯度优化，在冷启动，或者预先给定一段演示轨迹（包括专家演示，以及较差的演示），能通过在线强化学习（Online-RL），离线强化学习 (Offline-RL)，模仿学习 (IL)的自主切换，达到较好表现，证明上下文学习有巨大的灵活性。进一步，还能在演示的基础上，进一步通过自主探索持续提升自身能力。
+<br>
 OmniRL训练的智能体甚至可以完成多智能体协作任务。通过把对方的状态引入到观测，它可以完成类似Switch这种简单任务。这类任务要求智能体展现不同的行为模式来实现协作。而通过模型的上下文学习和适应能力，两个OmniRL控制的智能体能够有效完成上述任务。
 
 <table align=center width=850px>
-<center><h1>随机世界：AnyMDP</h1></center>
+<center><h2>随机世界：AnyMDP</h2></center>
 <tr>
 <td>
 <center>
@@ -221,10 +219,11 @@ OmniRL训练的智能体甚至可以完成多智能体协作任务。通过把�
 	<tr>
 	<td width=260px>
 	<center>
-	<img class="round" style="width:25%" src="./imgs/OmniRLDemoCliff.gif" alt="Cliff"/>
-	<img class="round" style="width:25%" src="./imgs/OmniRLDemoLake.gif" alt="Lake"/>
-	<img class="round" style="width:25%" src="./imgs/OmniRLDemoPend.gif" alt="Pendulum"/>
-	<img class="round" style="width:25%" src="./imgs/OmniRLSwitch.gif" alt="Switch"/>
+	<img class="round" style="height:100px" src="./imgs/OmniRLDemoCliff.gif" alt="Cliff"/>
+	<img class="round" style="height:100px" src="./imgs/OmniRLDemoLake.gif" alt="Lake"/>
+	<img class="round" style="height:100px" src="./imgs/OmniRLDemoPend.gif" alt="Pendulum"/>
+	<img class="round" style="height:100px" src="./imgs/OmniRLSwitch.gif" alt="Switch"/>
+	<br>
 	<img class="round" style="width:100%" src="./imgs/result_gym.pdf" alt="gym"/>
 	<p class="caption">OmniRL在完全未见过的Gymnasium环境中的表现</p>
 	</center>
@@ -233,8 +232,12 @@ OmniRL训练的智能体甚至可以完成多智能体协作任务。通过把�
 	</table>
 </center>
 
-<table align=center width=850px>
-<center><h1>首次揭示出数据多样性和序列长度重要性根源</h1></center>
+<h2>首次揭示出数据多样性和序列长度重要性根源</h2>
+OmniRL使用数千万参数的Transformer和高效线性注意力结构来进行建模。训练任务数超过50万个，时间步数超过一百万。OmniRL在实验中对比相同数据量，但来自不同任务数量的效果，发现任务数量不够多时，模型会转向记忆 + 环境识别模式，即把所有训练的环境储存在参数记忆中，通过上下文进行快速的辨识。这种模式下，智能体能否以更少的样本适应训练过程中见过的环境，但却不能泛化到未见环境。而任务数量充分时，才能激发通用上下文学习能力，这种能力可以有效泛化到未见任务，但对于所有任务都需要更长的上下文学习周期。这个结论一定程度说明:
+<ul>  
+<li><strong style="color: red; font-weight: bold;">数据的完整性和多样性比数据的绝对准确性（absolute fidelity）更重要</strong>（Long In-Context Learning Horizon）.即使采用失真的数据，通过提升上下文学习的泛化性，也有可能更好泛化到真实任务。</li>  
+<li><strong style="color: red; font-weight: bold;">长序列建模和长时记忆是通用学习能力的自然选择</strong>（High In-Context Learning Potential）.在训练任务数量增加时，模型在学习过程中自然选择不去记忆任务关联的知识，而是只记忆学习方法，从而导致对训练集中出现的任务也需要花费更长适应时间。这正是大规模元学习的特点。</li>  
+</ul>
 <tr>
 <td>
 <center>
@@ -251,17 +254,12 @@ OmniRL训练的智能体甚至可以完成多智能体协作任务。通过把�
 </table>
 </center>
 
-OmniRL使用数千万参数的Transformer和高效线性注意力结构来进行建模。训练任务数超过50万个，时间步数超过一百万。OmniRL在实验中对比相同数据量，但来自不同任务数量的效果，发现任务数量不够多时，模型会转向记忆 + 环境识别模式，即把所有训练的环境储存在参数记忆中，通过上下文进行快速的辨识。这种模式下，智能体能否以更少的样本适应训练过程中见过的环境，但却不能泛化到未见环境。而任务数量充分时，才能激发通用上下文学习能力，这种能力可以有效泛化到未见任务，但对于所有任务都需要更长的上下文学习周期。这个结论一定程度说明:
-<ul>  
-	<li><strong style="color: red; font-weight: bold;">数据的完整性和多样性比数据的绝对准确性（absolute fidelity）更重要</strong>（Long In-Context Learning Horizon）.即使采用失真的数据，通过提升上下文学习的泛化性，也有可能更好泛化到真实任务。</li>  
-	<li><strong style="color: red; font-weight: bold;">长序列建模和长时记忆是通用学习能力的自然选择</strong>（High In-Context Learning Potential）.在训练任务数量增加时，模型在学习过程中自然选择不去记忆任务关联的知识，而是只记忆学习方法，从而导致对训练集中出现的任务也需要花费更长适应时间。这正是大规模元学习的特点。</li>  
-  </ul>
 
-
-<table align=center width=850px>
-<center><h1>面向下一代通用具身智能体的技术探索</h1></center>
+<h2>面向下一代通用具身智能体的技术探索</h2>
 我们的最终目标是实现对任意环境都能完全自主探索和学习的智能体。对于具身智能意义更加重大。大语言模型通过参数记忆捕捉了大量常识，百科和数理逻辑，构成了其零样本能力的基础。但具身智能面对多样的环境，任务以及复杂的本体异构性，常识很难成为解决具身问题的基础。我们认为，自主学习能力和长时记忆将是通用具身智能体的关键。
-<h2>和当前大语言模型的长时序推理和思维链的异同点。
+<br>
+<h3>和当前大语言模型的长时序推理和思维链的异同点。</h3>
+<br>
 我们认为，当前OmniRL更多侧重系统1（直觉思维）的学习能力，后者侧重系统2（逻辑思维和规划）本身。不论系统1还是系统2能力的学习和提升，当前主流大模型都没有探索足够充分，OmniRL则在这部分填补了很多空白。
 
 </body>
