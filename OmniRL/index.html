@@ -206,26 +206,24 @@ AnyMDP基于马尔科夫决策过程（Markov Decision Process, MDP）构建随�
 <h2>首次利用上下文学习统一多强化学习和模仿学习</h2>
 <br>
 OmniRL提出同时利用先验信息和后验奖励（Feedback）进行上下文学习，使得该模型可以自己在不同学习模式间根据需求切换。图2展示了在随机世界中训练的OmniRL模型，仅通过上下文学习，不依赖于任何梯度优化，在冷启动，或者预先给定一段演示轨迹（包括专家演示，以及较差的演示），能通过在线强化学习（Online-RL），离线强化学习 (Offline-RL)，模仿学习 (IL)的自主切换，达到较好表现，证明上下文学习有巨大的灵活性。进一步，还能在演示的基础上，进一步通过自主探索持续提升自身能力。
-<table align=center width=850px>
+
+<center>
+	<table align=center width=850px>
 	<tr>
-	<td>
+	<td width=260px>
 	<center>
-		<table align=center width=850px>
-		<tr>
-		<td width=260px>
-		<center>
-		<img class="round" style="height:60px" src="./imgs/OmniRLDemoCliff.gif" alt="Cliff"/>
-		<img class="round" style="height:60px" src="./imgs/OmniRLDemoLake.gif" alt="Lake"/>
-		<img class="round" style="height:60px" src="./imgs/OmniRLDemoPend.gif" alt="Pendulum"/>
-		<img class="round" style="height:60px" src="./imgs/OmniRLSwitch.gif" alt="Switch"/>
-		<br>
-		<img class="round" style="width:90%" src="./imgs/result_gym.png" alt="gym"/>
-		<p class="caption">OmniRL在完全未见过的Gymnasium环境中的表现</p>
-		</center>
-		</td>
-		</tr>
-		</table>
+	<img class="round" style="height:60px" src="./imgs/OmniRLDemoCliff.gif" alt="Cliff"/>
+	<img class="round" style="height:60px" src="./imgs/OmniRLDemoLake.gif" alt="Lake"/>
+	<img class="round" style="height:60px" src="./imgs/OmniRLDemoPend.gif" alt="Pendulum"/>
+	<img class="round" style="height:60px" src="./imgs/OmniRLSwitch.gif" alt="Switch"/>
+	<br>
+	<img class="round" style="width:90%" src="./imgs/result_gym.png" alt="gym"/>
+	<p class="caption">OmniRL在完全未见过的Gymnasium环境中的表现</p>
 	</center>
+	</td>
+	</tr>
+	</table>
+</center>
 <br>
 OmniRL训练的智能体甚至可以完成多智能体协作任务。通过把对方的状态引入到观测，它可以完成类似Switch这种简单任务。这类任务要求智能体展现不同的行为模式来实现协作。而通过模型的上下文学习和适应能力，两个OmniRL控制的智能体能够有效完成上述任务。
 
