@@ -1,5 +1,5 @@
 # Site settings
-title: AGI Hidden Gems
+title: FutureAGI
 SEOTitle: 通用智能 非常识 | AGI non-obvious insights
 header-img: img/post-bg-desk.jpg
 email: fanwang.px@gmail.com
@@ -50,8 +50,8 @@ gitalk:
   clientID: Ov23liAvXIbNvWc1TXmI                            #生成的clientID
   clientSecret: 4c86ea379dba645c509d9cfe96bcffe03f06c131    #生成的clientSecret
   repo: futureagi.github.io    #仓库名称
-  owner: WorldEditors    #github用户名
-  admin: WorldEditors
+  owner: FutureAGI    #github用户名
+  admin: FutureAGI
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
@@ -61,35 +61,10 @@ gitalk:
 # Baidu Analytics
 ba_track_id: d04a8211b437a9a591b30aa017f8dd79
 
-
-
-
-
 # Featured Tags
 featured-tags: true                     # 是否使用首页标签
 featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
 
-
-
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
 service-worker: true
-
-
-
-# Friends
-friends: [
-    {
-        title: "WY",
-        href: "http://zhengwuyang.com"
-    },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
-    },{
-        title: "Apple",
-        href: "https://apple.com"
-    },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
-    }
-]
